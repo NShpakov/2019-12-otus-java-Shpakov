@@ -1,13 +1,11 @@
 package ru.otus.l03;
 
-import java.util.*;;
+import java.util.*;
 
 public class Main {
 	public static void main(String[] args) {
 
 		Collection<String> listEmpty = new DIYArrayLIst<>();
-		List<String> list2 = new ArrayList<>();
-		List<String> list3 = new ArrayList<>();
 
 		String[] str = new String[22];
 		for (int i = 0; i <= 21; i++) {
@@ -20,9 +18,9 @@ public class Main {
 
 		List<String> listSrc = new ArrayList<>();
 		for (int i = 0; i <= 21; i++) {
-			list2.add("стр" + i);
+			listSrc.add("стр" + i);
 		}
-		List<String> listCopy = new DIYArrayLIst<>(list2);
+		List<String> listCopy = new DIYArrayLIst<>(listSrc);
 
 		Collections.copy(listCopy, listSrc);
 		System.out.println("Проверка метода: " + "Collections.static <T> void copy(List<? super T> dest, List<? extends T> src)");
