@@ -1,10 +1,10 @@
 package ru.otus.l03;
 
-public class Cars {
+public class Car {
 	public String model;
 	public int years;
 
-	public Cars(String model, int years) {
+	public Car(String model, int years) {
 		this.model = model;
 		this.years = years;
 	}

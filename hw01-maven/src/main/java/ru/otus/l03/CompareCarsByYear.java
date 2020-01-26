@@ -7,6 +7,6 @@ public class CompareCarsByYear implements Comparator {
 
 	@Override
 	public int compare(Object o1, Object o2) {
-		return ((Cars) o1).years - ((Cars) o2).years;
+		return ((Car) o1).years - ((Car) o2).years;
 	}
 }

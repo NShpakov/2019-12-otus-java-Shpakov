@@ -1,34 +1,45 @@
 package ru.otus.l03;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;;
 
 public class Main {
 	public static void main(String[] args) {
-		List<Cars> cars2 = new DIYArrayList<>();
-		List<Cars> cars = new ArrayList<>();
 
-		int itemsCount = 22;
+		Collection<String> listEmpty = new DIYArrayLIst<>();
+		List<String> list2 = new ArrayList<>();
+		List<String> list3 = new ArrayList<>();
 
-		cars.add(new Cars("Audi", 1987));
-		cars.add(new Cars("Opel", 1983));
-		cars.add(new Cars("Opel", 1956));
-		cars.add(new Cars("Opel", 1984));
-
-		// Вывод коллекции автомобилей в стандартном списке
-		for (int i = 4; i < itemsCount; i++) {
-			cars.add(new Cars("Opel" + i, 1989 + i));
+		String[] str = new String[22];
+		for (int i = 0; i <= 21; i++) {
+			str[i] = "Строка" + i;
 		}
+		Collections.addAll(listEmpty, str);
+		System.out.println("Проверка метода: " + "Collections.addAll(Collection<? super T> c, T... elements)");
+		System.out.println(listEmpty);
 
-		System.out.println(cars);
 
-		cars2.addAll(cars);
-		cars2.sort(new CompareCarsByYear());
-
-		//вывод коллекций автомобилей в новом списке
-		for (int i =0;i<itemsCount;i++ ){
-			System.out.println(cars2.get(i));
+		List<String> listSrc = new ArrayList<>();
+		for (int i = 0; i <= 21; i++) {
+			list2.add("стр" + i);
 		}
+		List<String> listCopy = new DIYArrayLIst<>(list2);
+
+		Collections.copy(listCopy, listSrc);
+		System.out.println("Проверка метода: " + "Collections.static <T> void copy(List<? super T> dest, List<? extends T> src)");
+		System.out.println("Результат копирования списка: " + listCopy);
+
+		System.out.println("Проверка метода: " + "Collections.static <T> void sort(List<T> list, Comparator<? super T> c)");
+		List<Car> cars = new DIYArrayLIst<>(25);
+		for (int i = 0; i <= 21; i++) {
+			cars.add(new Car("Audi", 1987 + i));
+		}
+		cars.add(new Car("Audi", 1957));
+		cars.add(new Car("Audi", 2020));
+		cars.add(new Car("Audi", 1963));
+		System.out.println("Несортированный список автомобилей : " + cars);
+
+
+		Collections.sort(cars, new CompareCarsByYear());
+		System.out.println("Список автомобилей отсортирован по году : " + cars);
 	}
 }
