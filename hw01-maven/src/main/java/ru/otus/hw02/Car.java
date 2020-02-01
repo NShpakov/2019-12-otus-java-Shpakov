@@ -1,4 +1,4 @@
-package ru.otus.l03;
+package ru.otus.hw02;
 
 public class Car {
 	public String model;
