@@ -149,7 +149,6 @@ public class DIYArrayLIst<T> implements List<T> {
 
 	@Override
 	public void add(int index, T element) {
-		//this.rangeCheckForAdd(index);
 		++this.modCount;
 		int s;
 		Object[] elementData;
