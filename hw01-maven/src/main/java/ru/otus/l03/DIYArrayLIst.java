@@ -11,17 +11,6 @@ public class DIYArrayLIst<T> implements List<T> {
 	private static final Object[] EMPTY_ELEMENTDATA = new Object[0];
 	private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = new Object[0];
 
-	public DIYArrayLIst(List<String> list2) {
-		this.elementData = list2.toArray();
-		if ((this.size = this.elementData.length) != 0) {
-			if (this.elementData.getClass() != Object[].class) {
-				this.elementData = Arrays.copyOf(this.elementData, this.size, Object[].class);
-			}
-		} else {
-			this.elementData = EMPTY_ELEMENTDATA;
-		}
-	}
-
 	public DIYArrayLIst() {
 		this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
 	}
@@ -170,7 +159,7 @@ public class DIYArrayLIst<T> implements List<T> {
 
 		System.arraycopy(elementData, index, elementData, index + 1, s - index);
 		elementData[index] = element;
-		this.size = s + 1;
+		this.grow() ;
 	}
 
 	private Object[] grow() {
@@ -178,7 +167,8 @@ public class DIYArrayLIst<T> implements List<T> {
 	}
 
 	private Object[] grow(int minCapacity) {
-		return this.elementData = Arrays.copyOf(this.elementData, this.newCapacity(minCapacity));
+		elementData = Arrays.copyOf(this.elementData, this.newCapacity(minCapacity));
+		return this.elementData;
 	}
 
 	private int newCapacity(int minCapacity) {
