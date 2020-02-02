@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
+		<main.basedir>${project.basedir}/../</main.basedir>
 		<com.google.guava.version>28.1-jre</com.google.guava.version>
 	</properties>
 
