@@ -23,9 +23,9 @@ public class IoC {
 
 		@Override
 		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		//	Parameter[] params =method.getParameters();
-			if (!method.isAnnotationPresent(Log.class)) {
-				System.out.println("executed method: calculation, param:"  + method.getParameters()[0]);
+
+			if (testlog.getClass().getDeclaredMethod("calculation", int.class).isAnnotationPresent(Log.class)) {
+				System.out.println("executed method: calculation, param:"  + args[0]);
 			}
 
 			return method.invoke(testlog, args);
