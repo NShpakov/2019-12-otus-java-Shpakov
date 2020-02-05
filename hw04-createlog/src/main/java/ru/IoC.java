@@ -9,6 +9,7 @@ public class IoC {
 
 	static TestLoggingInterface createTestLogging() {
 		InvocationHandler handler = new DemoInvocationHandler(new TestLogging());
+
 		return (TestLoggingInterface) Proxy.newProxyInstance(IoC.class.getClassLoader(),
 				new Class<?>[]{TestLoggingInterface.class}, handler);
 	}
@@ -24,7 +25,7 @@ public class IoC {
 		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		//	Parameter[] params =method.getParameters();
 			if (!method.isAnnotationPresent(Log.class)) {
-				System.out.println("executed method: calculation, param:"  + method.invoke(testlog, args));
+				System.out.println("executed method: calculation, param:"  + method.getParameters()[0]);
 			}
 
 			return method.invoke(testlog, args);
