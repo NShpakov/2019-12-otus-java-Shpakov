@@ -2,20 +2,20 @@ package main.java.ru;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Parameter;
 import java.lang.reflect.Proxy;
 
 public class IoC {
 
-	static TestLoggingInterface createTestLogging() {
+	public TestLoggingInterface createMyClass() {
 		InvocationHandler handler = new DemoInvocationHandler(new TestLogging());
 
-		return (TestLoggingInterface) Proxy.newProxyInstance(IoC.class.getClassLoader(),
+		return (TestLoggingInterface) Proxy.newProxyInstance(Main.class.getClassLoader(),
 				new Class<?>[]{TestLoggingInterface.class}, handler);
+
 	}
 
 	static class DemoInvocationHandler implements InvocationHandler {
-		private final TestLoggingInterface testlog;
+		TestLoggingInterface testlog;
 
 		DemoInvocationHandler(TestLoggingInterface testlog) {
 			this.testlog = testlog;
@@ -25,7 +25,7 @@ public class IoC {
 		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
 			if (testlog.getClass().getDeclaredMethod("calculation", int.class).isAnnotationPresent(Log.class)) {
-				System.out.println("executed method: calculation, param:"  + args[0]);
+				System.out.println("executed method: calculation, param:" + args[0]);
 			}
 
 			return method.invoke(testlog, args);
