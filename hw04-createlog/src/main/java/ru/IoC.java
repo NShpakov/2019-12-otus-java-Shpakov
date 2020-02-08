@@ -15,9 +15,9 @@ public class IoC {
 	}
 
 	static class DemoInvocationHandler implements InvocationHandler {
-		TestLoggingInterface testlog;
+		TestLogging testlog;
 
-		DemoInvocationHandler(TestLoggingInterface testlog) {
+		DemoInvocationHandler(TestLogging testlog) {
 			this.testlog = testlog;
 		}
 
