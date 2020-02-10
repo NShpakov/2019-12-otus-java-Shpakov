@@ -16,6 +16,8 @@
 
 	<modules>
 		<module>hw01-maven</module>
+		<module>hw05-createframework</module>
+
 	</modules>
 
 	<properties>
