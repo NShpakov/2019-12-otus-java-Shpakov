@@ -2,7 +2,6 @@ package ru.otus.framework;
 
 import ru.otus.framework.annotations.After;
 import ru.otus.framework.annotations.Before;
-import ru.otus.framework.annotations.Test;
 
 public class TestClassWithoutTests {
 	public void test1() {

@@ -5,5 +5,7 @@ public class Main {
 		TestRunner.run(TestClass.class);
 		System.out.println("_____________________________");
 		TestRunner.run(TestClassWithoutTests.class);
+		System.out.println("_____________________________");
+		TestRunner.run(TestClassCheckingExceptionInBefore.class);
 	}
 }

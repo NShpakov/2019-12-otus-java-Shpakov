@@ -6,12 +6,13 @@ import ru.otus.framework.annotations.Test;
 
 
 import java.lang.reflect.Method;
+import java.util.List;
 
 
 public class TestRunner {
 	private static Class<?> clazz;
-	private static int FAILED = 0;
-	private static int TOTAL;
+	private int failed;
+	private int total;
 
 	TestRunner(Class<?> clazz) {
 		this.clazz = clazz;
@@ -19,22 +20,28 @@ public class TestRunner {
 
 	private void testOrder() {
 		Object testCase = null;
-		if (!ReflectionHelper.getMethods(clazz, Test.class).isEmpty()) {
-			TOTAL = ReflectionHelper.getMethods(clazz, Test.class).size();
-			System.out.println("Всего тестов: " + TOTAL);
-			for (Method m : ReflectionHelper.getMethods(clazz, Test.class)) {
+		List<Method> listOfTests = ReflectionHelper.getMethods(clazz, Test.class);
+		if (!listOfTests.isEmpty()) {
+			total = listOfTests.size();
+			System.out.println("Всего тестов: " + total);
+			for (Method m : listOfTests) {
 				try {
 					testCase = ReflectionHelper.newInstance(clazz);
 					ReflectionHelper.invoke(testCase, ReflectionHelper.getMethods(testCase, Before.class));
-					ReflectionHelper.invoke(testCase, m);
-					ReflectionHelper.invoke(testCase, ReflectionHelper.getMethods(testCase, After.class));
 				} catch (Exception e) {
-					FAILED++;
+					e.printStackTrace();
+					ReflectionHelper.invoke(testCase, ReflectionHelper.getMethods(testCase, After.class));
+					failed=total;
+					break;
+				}
+				try {
+					ReflectionHelper.invoke(testCase, m);
+				} catch (Exception e) {
+					failed++;
 					e.printStackTrace();
 				}
-
 			}
-			System.out.println("Количество упавших тестов :" + FAILED + " . Количество пройденных: " +(TOTAL-FAILED));
+			System.out.println("Количество упавших тестов :" + failed + " . Количество пройденных: " + (total - failed));
 		} else {
 			throw new IllegalCallerException("Не найдено методов c аннотацией @Test");
 		}
