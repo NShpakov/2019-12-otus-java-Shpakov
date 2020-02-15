@@ -1,4 +1,4 @@
-package ru.otus.framework;
+package ru.otus.framework.helper;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
