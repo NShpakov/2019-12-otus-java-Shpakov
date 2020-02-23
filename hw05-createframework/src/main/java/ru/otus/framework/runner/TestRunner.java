@@ -27,8 +27,13 @@ public class TestRunner {
 	}
 
 	private void callAfter() {
-		List<Method> listOfAfter = ReflectionHelper.getMethods(testCase, After.class);
-		ReflectionHelper.invoke(testCase, listOfAfter);
+		try {
+			List<Method> listOfAfter = ReflectionHelper.getMethods(testCase, After.class);
+			ReflectionHelper.invoke(testCase, listOfAfter);
+		} catch (Exception e) {
+			System.out.println("Исключение в After");
+			e.getMessage();
+		}
 
 	}
 

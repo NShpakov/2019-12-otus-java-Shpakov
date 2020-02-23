@@ -18,6 +18,7 @@
 		<module>hw01-maven</module>
 		<module>hw05-createframework</module>
 
+		<module>hw04-createlog</module>
 	</modules>
 
 	<properties>

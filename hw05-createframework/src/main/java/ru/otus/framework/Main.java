@@ -1,6 +1,7 @@
 package ru.otus.framework;
 
 import ru.otus.framework.runner.TestRunner;
+import ru.otus.framework.tests.TestAfterException;
 import ru.otus.framework.tests.TestClass;
 import ru.otus.framework.tests.TestClassCheckingExceptionInBefore;
 import ru.otus.framework.tests.TestClassWithoutTests;
@@ -12,5 +13,7 @@ public class Main {
 		TestRunner.run(TestClassWithoutTests.class);
 		System.out.println("_____________________________");
 		TestRunner.run(TestClassCheckingExceptionInBefore.class);
+		System.out.println("_____________________________");
+		TestRunner.run(TestAfterException.class);
 	}
 }
