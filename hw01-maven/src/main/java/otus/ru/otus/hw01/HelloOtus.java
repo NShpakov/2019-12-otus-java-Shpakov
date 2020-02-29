@@ -1,4 +1,4 @@
-package ru.otus.hw01;
+package otus.ru.otus.hw01;
 
 import com.google.common.collect.ImmutableList;
 
