@@ -17,6 +17,8 @@
 	<modules>
 		<module>hw01-maven</module>
 		<module>ATM</module>
+		<module>hw05-createframework</module>
+		<module>hw04-createlog</module>
 	</modules>
 
 	<properties>
