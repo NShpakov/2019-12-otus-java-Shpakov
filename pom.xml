@@ -16,6 +16,7 @@
 
 	<modules>
 		<module>hw01-maven</module>
+		<module>ATM</module>
 	</modules>
 
 	<properties>
