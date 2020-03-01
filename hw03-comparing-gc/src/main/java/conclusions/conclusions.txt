@@ -1,0 +1,26 @@
+-Xms3G -Xmx3G
+1. -XX:+UseSerialGC
+type = OLD, count = 0, totalDuration 0 ms, duration = 0 ms
+type = YOUNG, count = 0, totalDuration 0 ms, duration = 0 ms
+type = OTHERS, count = 19, totalDuration 30534 ms, duration = 15983 ms
+
+Примерное время работы 3 мин 25 сек
+
+2. -XX:+UseParallelGC
+type = YOUNG, count = 0, totalDuration 0 ms, duration = 0 ms
+type = OLD, count = 0, totalDuration 0 ms, duration = 0 ms
+type = OTHERS, count = 8, totalDuration 5328 ms, duration = 5328 ms
+
+Примерное время работы 2 мин 17 сек
+
+3. G1
+type = YOUNG, count = 39, totalDuration 6801 ms, duration = 3299 ms
+type = OLD, count = 1, totalDuration 2289 ms, duration = 2289 ms
+type = OTHERS, count = 0, totalDuration 0 ms, duration = 0 ms
+
+Примерное время работы 2 мин 4 сек
+
+Исходя из полученных графиков и метрик. Сборщик G1 был вызван чаще всего YOUNG =39 и OLD = 1.
+G1 меньше всего нагружал процессор. При этом приложение было остановлено на 9сек. UseParallelGC останавливал приложение на 5сек,
+при этом сильно нагружал процессор. UseSerialGC меньше всего нагружал процессор, но останавливал приложение более чем на 30 сек.
+Исходя из полученных данных самым оптимальным является G1

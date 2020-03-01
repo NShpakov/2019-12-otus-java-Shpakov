@@ -1,0 +1,20 @@
+[2020-03-01T18:17:29.417+0300][0.010s][info][gc] Using Parallel
+[2020-03-01T18:17:34.718+0300][5,311s][info][gc] GC(0) Pause Young (Allocation Failure) 766M->172M(2944M) 144,299ms
+[2020-03-01T18:17:41.069+0300][11,662s][info][gc] GC(1) Pause Young (Allocation Failure) 940M->357M(2944M) 273,309ms
+[2020-03-01T18:17:48.270+0300][18,863s][info][gc] GC(2) Pause Young (Allocation Failure) 1125M->545M(2944M) 263,649ms
+[2020-03-01T18:17:55.508+0300][26,101s][info][gc] GC(3) Pause Young (Allocation Failure) 1313M->746M(2944M) 322,504ms
+[2020-03-01T18:18:02.850+0300][33,443s][info][gc] GC(4) Pause Young (Allocation Failure) 1514M->1115M(2944M) 521,358ms
+[2020-03-01T18:18:15.262+0300][45,855s][info][gc] GC(5) Pause Young (Allocation Failure) 1883M->1301M(2518M) 1283,909ms
+[2020-03-01T18:18:21.494+0300][52,087s][info][gc] GC(6) Pause Young (Allocation Failure) 1643M->1378M(2731M) 932,933ms
+[2020-03-01T18:18:28.541+0300][59,134s][info][gc] GC(7) Pause Young (Allocation Failure) 2091M->1836M(2731M) 1587,529ms
+[2020-03-01T18:18:35.967+0300][66,560s][info][gc] GC(8) Pause Young (Allocation Failure) 2178M->1915M(2731M) 1735,438ms
+[2020-03-01T18:18:43.828+0300][74,421s][info][gc] GC(9) Pause Young (Allocation Failure) 2257M->1995M(2731M) 1619,375ms
+[2020-03-01T18:18:53.195+0300][83,788s][info][gc] GC(10) Pause Full (Ergonomics) 1995M->1581M(2731M) 9367,244ms
+[2020-03-01T18:18:59.401+0300][89,995s][info][gc] GC(11) Pause Young (Allocation Failure) 1923M->1673M(2731M) 365,412ms
+[2020-03-01T18:19:06.769+0300][97,362s][info][gc] GC(12) Pause Young (Allocation Failure) 2015M->1752M(2731M) 954,118ms
+[2020-03-01T18:19:14.103+0300][104,696s][info][gc] GC(13) Pause Young (Allocation Failure) 2094M->1839M(2731M) 869,000ms
+[2020-03-01T18:19:22.900+0300][113,493s][info][gc] GC(14) Pause Full (Ergonomics) 1839M->1832M(2731M) 8796,360ms
+[2020-03-01T18:19:25.838+0300][116,431s][info][gc] GC(15) Pause Young (Allocation Failure) 1966M->1870M(2731M) 235,895ms
+[2020-03-01T18:19:35.241+0300][125,834s][info][gc] GC(16) Pause Full (Ergonomics) 1870M->1863M(2731M) 9402,878ms
+[2020-03-01T18:19:35.245+0300][125,838s][info][gc] GC(17) Pause Young (Allocation Failure) 1863M->1863M(2731M) 3,706ms
+[2020-03-01T18:19:43.085+0300][133,678s][info][gc] GC(18) Pause Full (Allocation Failure) 1863M->1863M(2731M) 7840,074ms
