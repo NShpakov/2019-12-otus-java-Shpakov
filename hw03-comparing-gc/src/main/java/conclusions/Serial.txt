@@ -1,0 +1,23 @@
+[2020-03-01T18:07:53.885+0300][0.006s][info][gc] Using Serial
+[2020-03-01T18:07:59.371+0300][5,492s][info][gc] GC(0) Pause Young (Allocation Failure) 819M->182M(2969M) 241,232ms
+[2020-03-01T18:08:06.351+0300][12,472s][info][gc] GC(1) Pause Young (Allocation Failure) 942M->373M(2969M) 395,031ms
+[2020-03-01T18:08:13.486+0300][19,607s][info][gc] GC(2) Pause Young (Allocation Failure) 1110M->564M(2969M) 326,744ms
+[2020-03-01T18:08:21.626+0300][27,747s][info][gc] GC(3) Pause Young (Allocation Failure) 1383M->872M(2969M) 511,725ms
+[2020-03-01T18:08:29.393+0300][35,515s][info][gc] GC(4) Pause Young (Allocation Failure) 1691M->1255M(2969M) 600,461ms
+[2020-03-01T18:08:41.344+0300][47,466s][info][gc] GC(5) Pause Young (Allocation Failure) 2074M->1452M(2969M) 541,442ms
+[2020-03-01T18:08:48.888+0300][55,009s][info][gc] GC(6) Pause Young (Allocation Failure) 2271M->1933M(2969M) 600,663ms
+[2020-03-01T18:09:04.247+0300][70,369s][info][gc] GC(8) Pause Full (Allocation Failure) 2753M->1597M(2969M) 2385,425ms
+[2020-03-01T18:09:04.247+0300][70,369s][info][gc] GC(7) Pause Young (Allocation Failure) 2753M->1597M(2969M) 2385,606ms
+[2020-03-01T18:09:21.246+0300][87,368s][info][gc] GC(10) Pause Full (Allocation Failure) 2416M->1796M(2969M) 2495,742ms
+[2020-03-01T18:09:21.246+0300][87,368s][info][gc] GC(9) Pause Young (Allocation Failure) 2416M->1796M(2969M) 2495,879ms
+[2020-03-01T18:09:29.812+0300][95,934s][info][gc] GC(12) Pause Full (Allocation Failure) 2109M->1877M(2969M) 2815,668ms
+[2020-03-01T18:09:29.812+0300][95,934s][info][gc] GC(11) Pause Young (Allocation Failure) 2109M->1877M(2969M) 2815,811ms
+[2020-03-01T18:09:38.695+0300][104,817s][info][gc] GC(14) Pause Full (Allocation Failure) 2696M->2109M(2969M) 3636,786ms
+[2020-03-01T18:09:38.695+0300][104,817s][info][gc] GC(13) Pause Young (Allocation Failure) 2696M->2109M(2969M) 3636,905ms
+[2020-03-01T18:10:00.295+0300][126,417s][info][gc] GC(15) Pause Full (Allocation Failure) 2969M->2317M(2969M) 3588,871ms
+[2020-03-01T18:10:18.489+0300][144,610s][info][gc] GC(16) Pause Full (Allocation Failure) 2968M->2473M(2969M) 3855,802ms
+[2020-03-01T18:10:33.848+0300][159,970s][info][gc] GC(17) Pause Full (Allocation Failure) 2969M->2592M(2969M) 3823,473ms
+[2020-03-01T18:10:48.030+0300][174,151s][info][gc] GC(18) Pause Full (Allocation Failure) 2968M->2679M(2969M) 4713,903ms
+[2020-03-01T18:10:59.348+0300][185,470s][info][gc] GC(19) Pause Full (Allocation Failure) 2969M->2751M(2969M) 4095,921ms
+[2020-03-01T18:11:06.995+0300][193,117s][info][gc] GC(20) Pause Full (Allocation Failure) 2901M->2789M(2969M) 3988,726ms
+[2020-03-01T18:11:12.091+0300][198,212s][info][gc] GC(21) Pause Full (Allocation Failure) 2789M->2788M(2969M) 5095,714ms
