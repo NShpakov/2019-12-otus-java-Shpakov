@@ -19,6 +19,8 @@
 		<module>ATM</module>
 		<module>hw05-createframework</module>
 		<module>hw04-createlog</module>
+		<module>hw08-jsonserialaizer</module>
+
 	</modules>
 
 	<properties>
