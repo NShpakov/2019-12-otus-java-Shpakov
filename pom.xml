@@ -28,6 +28,7 @@
 		<maven.compiler.target>13</maven.compiler.target>
 		<main.basedir>${project.basedir}/../</main.basedir>
 		<com.google.guava.version>28.1-jre</com.google.guava.version>
+		<org.projectlombok.lombok.version>1.18.6</org.projectlombok.lombok.version>
 	</properties>
 
 	<packaging>pom</packaging>
@@ -38,6 +39,12 @@
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${com.google.guava.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${org.projectlombok.lombok.version}</version>
+				<scope>provided</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
